@@ -15,8 +15,12 @@ import play.api.inject.ApplicationLifecycle
 import scala.concurrent.Future
 
 /**
-  * Created by User on 17.04.2017.
-  */
+ *
+ * Created with IntelliJ IDEA.
+ * User: Смирнов Иван (killips)
+ * Date: 17.04.2017
+ *
+ */
 
 trait LiquibaseComponent
 
