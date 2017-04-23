@@ -10,6 +10,6 @@ import org.squeryl.Schema
   *
   */
 
-object DatabaseSchema extends Schema {
+object DatabaseSchema {
 
 }
