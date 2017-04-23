@@ -1,4 +1,4 @@
-package catalogs.config
+package config
 
 import com.typesafe.config.ConfigFactory
 
@@ -13,6 +13,6 @@ object AppConfig {
 
   lazy val conf = ConfigFactory.load()
 
-  lazy val catalogFilePath = conf.getString("")
+  lazy val catalogFilePath = "app/catalogs/resources/"//conf.getString("")
 
 }

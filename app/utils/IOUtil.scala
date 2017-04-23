@@ -7,6 +7,12 @@ package utils
   * Date: 22.04.2017
   * Time: 15:37
   */
-class IOUtil {
+object  IOUtils extends IOUtils
 
+trait IOUtils
+{
+  def ensureClose[T <: {def close()}, R](resource: T)(block: T => R) =
+  {
+    try { block(resource) } finally { if (resource != null) resource.close() }
+  }
 }

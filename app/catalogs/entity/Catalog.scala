@@ -7,4 +7,5 @@ package catalogs.entity
   * Date: 22.04.2017
   * Time: 0:06
   */
+
 case class Catalog(code: String, title: String, checksum: String)

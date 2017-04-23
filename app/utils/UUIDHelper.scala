@@ -7,6 +7,16 @@ package utils
   * Date: 23.04.2017
   * Time: 11:52
   */
-class UUIDHelper {
 
+trait UUIDHelper {
+
+  def  random(size: Int) = {
+    assert(size <=32)
+    randomUUID.take(size)
+  }
+
+
+  def randomUUID = java.util.UUID.randomUUID().toString.replaceAll("-", "")
 }
+
+object UUIDHelper extends UUIDHelper

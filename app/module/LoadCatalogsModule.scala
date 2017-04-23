@@ -18,7 +18,7 @@ trait LoadCatalogs {
 class LoadCatalogsImpl @Inject()(lifecycle: ApplicationLifecycle, catalog: CatalogProcessorImpl) extends LoadCatalogs {
   catalog.importCatalogs()
 }
-
+//TODO: Надо удалить данный модуль, если всё будет работать без него.
 class LoadCatalogsModule extends AbstractModule {
   override def configure(): Unit = {
     bind(classOf[LoadCatalogs]).to(classOf[LoadCatalogsImpl])

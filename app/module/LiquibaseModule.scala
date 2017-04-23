@@ -4,6 +4,7 @@ import javax.inject.Inject
 import java.sql.Connection
 
 import akka.actor.ActorSystem
+import catalogs.CatalogProcessorImpl
 import com.google.inject.AbstractModule
 import com.typesafe.config.ConfigFactory
 import liquibase.Liquibase
@@ -24,7 +25,7 @@ import scala.concurrent.Future
 
 trait LiquibaseComponent
 
-class LiquibaseComponentImpl @Inject()(lifecycle: ApplicationLifecycle, db: Database) extends LiquibaseComponent {
+class LiquibaseComponentImpl @Inject()(lifecycle: ApplicationLifecycle, db: Database, catalog: CatalogProcessorImpl) extends LiquibaseComponent {
 
   lazy val config = ConfigFactory.load()
 
@@ -53,7 +54,7 @@ class LiquibaseComponentImpl @Inject()(lifecycle: ApplicationLifecycle, db: Data
   }
 
   performMigrations
-
+  catalog.importCatalogs()
 }
 
 class LiquibaseModule extends AbstractModule {
