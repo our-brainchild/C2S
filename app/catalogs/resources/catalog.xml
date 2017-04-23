@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <catalog code="catalogs.entity.RegionWorld" title="Регион мира">
+        <item code="" name="" />
+        <item code="23" name="lhf" />
+        <item code="32" name="646" />
+        <item code="8754" name="84" />
+    </catalog>
+
+    <catalog code="catalogs.entity.Country">
+        <item code="1" name="2" fullname="12" codeAlpha2="123" codeAlpha3="321" regionWorldId="123" />
+    </catalog>
+
+    <catalog code="catalogs.entity.City">
+        <item code="lol" name="" countryId="" />
+    </catalog>
+
+    <catalog code="catalogs.entity.TypeEducationalInstitution">
+        <item code=";p;" name="" fullname="" />
+    </catalog>
+
+    <catalog code="catalogs.entity.Language">
+        <item code="10" nameRaw='{"RU": "Абхазский", "EN": "Abkhaz"}' isoCode="AB" gostCode="АБХ" priority="" localeString="" />
+    </catalog>
+</root>

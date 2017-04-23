@@ -4,4 +4,90 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                             http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd">
+    <changeSet id="Create table Catalog C2S-3" author="ismirnov">
+        <createTable tableName="Catalog">
+            <column name="code" type="VARCHAR(256)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="TEXT"/>
+            <column name="checksum" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="Create table City C2S-3" author="ismirnov">
+        <createTable tableName="City">
+            <column name="id" type="VARCHAR(32)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT"/>
+            <column name="CountryCode" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="Create table Country C2S-3" author="ismirnov">
+        <createTable tableName="Country">
+            <column name="id" type="VARCHAR(32)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT"/>
+            <column name="fullname" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="codeAlpha2" type="TEXT"/>
+            <column name="codeAlpha3" type="TEXT"/>
+            <column name="regionWorld" type="TEXT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="Create table RegionWorld C2S-3" author="ismirnov">
+        <createTable tableName="RegionWorld">
+            <column name="id" type="VARCHAR(32)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="Create table Language C2S-3" author="ismirnov">
+        <createTable tableName="Language">
+            <column name="id" type="VARCHAR(32)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT"/>
+            <column name="isoCode" type="TEXT"/>
+            <column name="String" type="TEXT"/>
+            <column name="gostCode" type="TEXT"/>
+            <column name="priority" type="TEXT"/>
+            <column name="localeString" type="TEXT"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="Create table TypeEducationalInstitution C2S-3" author="ismirnov">
+        <createTable tableName="TypeEducationalInstitution">
+            <column name="id" type="VARCHAR(32)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="TEXT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="TEXT"/>
+            <column name="fullname" type="TEXT"/>
+        </createTable>
+    </changeSet>
 </databaseChangeLog>
