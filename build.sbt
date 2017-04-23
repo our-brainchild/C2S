@@ -14,9 +14,9 @@ libraryDependencies ++= Seq(
   cache,
   ws,
   "org.liquibase" % "liquibase-maven-plugin" % "3.5.3",
+  "org.squeryl" %% "squeryl" % "0.9.5-7",
   "org.postgresql" % "postgresql" % "42.0.0",
-  "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.0" % Test,
-  "com.github.aselab" % "squeryl" % "0.9.5"
+  "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.0" % Test
 )
 
 // Adds additional packages into Twirl

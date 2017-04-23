@@ -15,7 +15,7 @@ trait Service[T] {
 
   def insertEntry(data: T)
 
-  def deletEntry(id: Int)
+  def deleteEntry(id: Int)
 
   def updateEntry(data: T)
 }
